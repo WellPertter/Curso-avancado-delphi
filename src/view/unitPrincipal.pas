@@ -1,0 +1,36 @@
+unit unitPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmPrincipal = class(TForm)
+    Cronometro: TButton;
+    procedure CronometroClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses unitCronometro;
+
+procedure TfrmPrincipal.CronometroClick(Sender: TObject);
+begin
+ if frmCronometro = nil then
+  frmCronometro := TfrmCronometro.Create(Application);
+ frmCronometro.ShowModal;
+
+end;
+
+end.

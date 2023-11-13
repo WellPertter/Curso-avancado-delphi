@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/09/01 14:48:15.000.263,=C:\Users\desenv\Documents\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
+    <Transaction>2023/11/13 09:49:41.013,=C:\Users\desenv\Documents\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
+    <Transaction>2023/11/13 09:50:53.113,C:\ARTHUR\DESENVOLVIMENTO\Delphi-avancado\src\view\unitPrincipal.dfm=C:\Users\desenv\Documents\Embarcadero\Studio\Projects\Unit5.dfm</Transaction>
+    <Transaction>2023/11/13 09:50:53.113,C:\ARTHUR\DESENVOLVIMENTO\Delphi-avancado\src\view\unitPrincipal.pas=C:\Users\desenv\Documents\Embarcadero\Studio\Projects\Unit5.pas</Transaction>
+    <Transaction>2023/11/13 09:51:23.352,C:\ARTHUR\DESENVOLVIMENTO\Delphi-avancado\bin\Delphi_avancado.dproj=C:\Users\desenv\Documents\Embarcadero\Studio\Projects\Project5.dproj</Transaction>
+    <Transaction>2023/11/13 10:00:00.869,=C:\ARTHUR\DESENVOLVIMENTO\Delphi-avancado\bin\Unit1.pas</Transaction>
+    <Transaction>2023/11/13 10:00:21.235,C:\ARTHUR\DESENVOLVIMENTO\Delphi-avancado\src\view\unitCronometro.dfm=C:\ARTHUR\DESENVOLVIMENTO\Delphi-avancado\bin\Unit1.dfm</Transaction>
+    <Transaction>2023/11/13 10:00:21.235,C:\ARTHUR\DESENVOLVIMENTO\Delphi-avancado\src\view\unitCronometro.pas=C:\ARTHUR\DESENVOLVIMENTO\Delphi-avancado\bin\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
