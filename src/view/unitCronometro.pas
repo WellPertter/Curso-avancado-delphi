@@ -17,8 +17,13 @@ type
     Label1: TLabel;
     lbHoras: TLabel;
     btnPlay: TSpeedButton;
+    OpenDialog1: TOpenDialog;
+    btnAbrir: TButton;
+    editTempo: TEdit;
+    Label2: TLabel;
     procedure tTempoTimer(Sender: TObject);
     procedure btnPlayClick(Sender: TObject);
+    procedure btnAbrirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,9 +37,25 @@ implementation
 
 {$R *.dfm}
 
+procedure TfrmCronometro.btnAbrirClick(Sender: TObject);
+begin
+  if OpenDialog1.Execute then
+  begin
+    MediaPlayer1.FileName := OpenDialog1.FileName;
+    btnPlay.Enabled := True;
+    lbSegundos.Caption := '00';
+    lblMinutos.Caption := '00';
+    lbHoras.Caption := '00';
+  end;
+end;
+
 procedure TfrmCronometro.btnPlayClick(Sender: TObject);
 begin
-  tTempo.Enabled := true;
+  lbSegundos.Caption := '00';
+  lblMinutos.Caption := '00';
+  lbHoras.Caption := '00';
+  MediaPlayer1.Visible := False;
+  tTempo.Enabled := True;
 end;
 
 procedure TfrmCronometro.tTempoTimer(Sender: TObject);
@@ -73,6 +94,16 @@ begin
 
     end else
       lblMinutos.Caption :=  '0' + IntToStr(StrToInt(lblMinutos.Caption) + 1);
+  end;
+
+  if StrToInt(lblMinutos.Caption) = StrToInt(editTempo.Text) then
+  begin
+    MediaPlayer1.Visible := True;
+    MediaPlayer1.Open;
+    MediaPlayer1.Play;
+
+    editTempo.Text := '';
+    tTempo.Enabled := False;
   end;
 
 end;

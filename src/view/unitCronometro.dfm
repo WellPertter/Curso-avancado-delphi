@@ -1,9 +1,9 @@
 object frmCronometro: TfrmCronometro
   Left = 0
   Top = 0
-  Caption = 'frmCronometro'
-  ClientHeight = 127
-  ClientWidth = 362
+  Caption = 'Cron'#244'metro'
+  ClientHeight = 130
+  ClientWidth = 396
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,7 +15,7 @@ object frmCronometro: TfrmCronometro
   PixelsPerInch = 96
   TextHeight = 13
   object lbSegundos: TLabel
-    Left = 210
+    Left = 244
     Top = 8
     Width = 36
     Height = 35
@@ -28,7 +28,7 @@ object frmCronometro: TfrmCronometro
     ParentFont = False
   end
   object lblMinutos: TLabel
-    Left = 153
+    Left = 187
     Top = 8
     Width = 36
     Height = 35
@@ -41,7 +41,7 @@ object frmCronometro: TfrmCronometro
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 193
+    Left = 227
     Top = 8
     Width = 11
     Height = 35
@@ -54,7 +54,7 @@ object frmCronometro: TfrmCronometro
     ParentFont = False
   end
   object Label1: TLabel
-    Left = 141
+    Left = 175
     Top = 8
     Width = 11
     Height = 35
@@ -65,9 +65,10 @@ object frmCronometro: TfrmCronometro
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
+    Visible = False
   end
   object lbHoras: TLabel
-    Left = 99
+    Left = 133
     Top = 8
     Width = 36
     Height = 35
@@ -78,13 +79,15 @@ object frmCronometro: TfrmCronometro
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
+    Visible = False
   end
   object btnPlay: TSpeedButton
     Left = 0
-    Top = 96
-    Width = 362
+    Top = 99
+    Width = 396
     Height = 31
     Align = alBottom
+    Enabled = False
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C0060000C40E0000C40E00000000000000000000FFFFFFFFFFFF
@@ -143,12 +146,25 @@ object frmCronometro: TfrmCronometro
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     OnClick = btnPlayClick
-    ExplicitTop = 102
+    ExplicitTop = 105
+  end
+  object Label2: TLabel
+    Left = 1
+    Top = 13
+    Width = 54
+    Height = 14
+    Caption = 'Minutos:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object MediaPlayer1: TMediaPlayer
     Left = 0
-    Top = 66
-    Width = 361
+    Top = 69
+    Width = 395
     Height = 30
     Align = alBottom
     VisibleButtons = [btPlay, btPause]
@@ -156,11 +172,36 @@ object frmCronometro: TfrmCronometro
     Visible = False
     ParentDoubleBuffered = False
     TabOrder = 0
+    ExplicitTop = 66
+    ExplicitWidth = 361
+  end
+  object btnAbrir: TButton
+    Left = 1
+    Top = 38
+    Width = 116
+    Height = 25
+    Caption = 'M'#250'sica'
+    TabOrder = 1
+    OnClick = btnAbrirClick
+  end
+  object editTempo: TEdit
+    Left = 61
+    Top = 11
+    Width = 56
+    Height = 21
+    TabOrder = 2
   end
   object tTempo: TTimer
     Enabled = False
     OnTimer = tTempoTimer
-    Left = 288
-    Top = 16
+    Left = 264
+    Top = 48
+  end
+  object OpenDialog1: TOpenDialog
+    FileName = 
+      'C:\ARTHUR\DESENVOLVIMENTO\Curso-avancado-delphi\src\song\mixaund' +
+      '-dreamers.mp3'
+    Left = 216
+    Top = 48
   end
 end
