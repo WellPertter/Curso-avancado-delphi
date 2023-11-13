@@ -159,6 +159,7 @@ object frmCronometro: TfrmCronometro
   end
   object tTempo: TTimer
     Enabled = False
+    Interval = 100
     OnTimer = tTempoTimer
     Left = 288
     Top = 16

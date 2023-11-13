@@ -32,7 +32,7 @@ object frmCronometro: TfrmCronometro
     Top = 8
     Width = 36
     Height = 35
-    Caption = '00'
+    Caption = '58'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -29
@@ -71,7 +71,7 @@ object frmCronometro: TfrmCronometro
     Top = 8
     Width = 36
     Height = 35
-    Caption = '00'
+    Caption = '60'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -29
@@ -159,6 +159,7 @@ object frmCronometro: TfrmCronometro
   end
   object tTempo: TTimer
     Enabled = False
+    Interval = 1
     OnTimer = tTempoTimer
     Left = 288
     Top = 16

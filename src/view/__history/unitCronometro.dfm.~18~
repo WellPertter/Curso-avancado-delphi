@@ -32,7 +32,7 @@ object frmCronometro: TfrmCronometro
     Top = 8
     Width = 36
     Height = 35
-    Caption = '00'
+    Caption = '58'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -29
@@ -71,7 +71,7 @@ object frmCronometro: TfrmCronometro
     Top = 8
     Width = 36
     Height = 35
-    Caption = '00'
+    Caption = '59'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -29
@@ -85,7 +85,6 @@ object frmCronometro: TfrmCronometro
     Width = 362
     Height = 31
     Align = alBottom
-    Caption = 'Iniciar'
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C0060000C40E0000C40E00000000000000000000FFFFFFFFFFFF
@@ -143,6 +142,7 @@ object frmCronometro: TfrmCronometro
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+    OnClick = btnPlayClick
     ExplicitTop = 102
   end
   object MediaPlayer1: TMediaPlayer
@@ -158,6 +158,9 @@ object frmCronometro: TfrmCronometro
     TabOrder = 0
   end
   object tTempo: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = tTempoTimer
     Left = 288
     Top = 16
   end

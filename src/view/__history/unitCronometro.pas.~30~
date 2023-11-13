@@ -57,13 +57,13 @@ begin
     lbSegundos.Caption := '00';
 
     if (min >= 9) and (min < 59) then
-      lblMinutos.Caption :=  IntToStr(StrToInt(lblMinutos.Caption) + 1)
+      lblMinutos.Caption :=  IntToStr(StrToInt(lblMinutos.Caption) + 10)
     else if min = 59 then
     begin
       lblMinutos.Caption := '00';
 
-      if (hor >= 9) and (hor < 59 ) then
-        lbHoras.Caption := IntToStr(StrToInt(lbHoras.Caption) + 1)
+      if (hor >= 9) and (hor <= 59 ) then
+        lbHoras.Caption := IntToStr(StrToInt(lbHoras.Caption) + 10)
       else if hor = 59  then
       begin
         lbHoras.Caption := '60';
